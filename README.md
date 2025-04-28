@@ -1,41 +1,41 @@
-# Car Sales Prediction
+# Car Sales Prediction (Task 4)
 
- Project Overview
+## Project Overview
 This project fulfills Task 4: Sales Prediction, focusing on forecasting `car purchase amount` using the `car_purchasing.csv` dataset and optimizing marketing strategies for sales growth. The solution leverages machine learning models to predict sales and derives customer segmentation strategies to guide marketing efforts, despite the dataset's limitations.
 
- Dataset
-Source: `car_purchasing.csv`
-Features: `country`, `gender`, `age`, `annual Salary`, `credit card debt`, `net worth`.
-Target: `car purchase amount`.
-Limitation: The dataset lacks marketing-specific data (e.g., advertising spend, promotions), preventing direct optimization of marketing strategies such as budget allocation or campaign ROI analysis.
+## Dataset
+- **Source**: `car_purchasing.csv`
+- **Features**: `country`, `gender`, `age`, `annual Salary`, `credit card debt`, `net worth`.
+- **Target**: `car purchase amount`.
+- **Limitation**: The dataset lacks marketing-specific data (e.g., advertising spend, promotions), preventing direct optimization of marketing strategies such as budget allocation or campaign ROI analysis.
 
-Approach
- Preprocessing
+## Approach
+### Preprocessing
 - Dropped irrelevant columns: `customer name`, `customer e-mail`.
 - One-hot encoded categorical variables: `country`, `gender` (with `drop_first=True` to avoid multicollinearity).
 - Imputed missing values in numerical columns with their means.
 - Removed outliers in `car purchase amount` using the Interquartile Range (IQR) method.
 - Scaled features using `StandardScaler` for model training.
 
- Feature Engineering
+### Feature Engineering
 - Created a `wealth_index` feature: (`annual Salary` + `net worth` - `credit card debt`) / 3.
 - Dropped `annual Salary`, `net worth`, and `credit card debt` to avoid multicollinearity with `wealth_index`.
 
- Modeling
-- Models Used*:
+### Modeling
+- **Models Used**:
   - **Linear Regression**: Baseline model.
   - **Random Forest**: Ensemble model for capturing non-linear relationships.
   - **XGBoost**: Advanced gradient boosting model for improved performance.
 - **Train-Test Split**: 80/20 split with `random_state=42` for reproducibility.
 - **Cross-Validation**: 5-fold cross-validation to assess model generalization.
 
- Evaluation
+### Evaluation
 - **Metrics**: R², Mean Squared Error (MSE), Mean Absolute Error (MAE), and adjusted R².
 - **Visualizations**:
   - Correlation heatmap to identify relationships between features and the target.
   - Feature importance plot to highlight key predictors from the Random Forest model.
 
-Results
+## Results
 - **Model Performance** (Test Set):
   - Linear Regression:
     - R²: 0.325
