@@ -1,7 +1,7 @@
-# Car Sales Prediction (Task 4)
+# Car Sales Prediction 
 
 ## Project Overview
-This project fulfills Task 4: Sales Prediction, focusing on forecasting `car purchase amount` using the `car_purchasing.csv` dataset and optimizing marketing strategies for sales growth. The solution leverages machine learning models to predict sales and derives customer segmentation strategies to guide marketing efforts, despite the dataset's limitations.
+This project fulfills : Sales Prediction, focusing on forecasting `car purchase amount` using the `car_purchasing.csv` dataset and optimizing marketing strategies for sales growth. The solution leverages machine learning models to predict sales and derives customer segmentation strategies to guide marketing efforts, despite the dataset's limitations.
 
 ## Dataset
 - **Source**: `car_purchasing.csv`
